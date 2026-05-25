@@ -37,8 +37,18 @@ def inject_fitgenuss_styles():
 
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    header {visibility: hidden;}
     .stAppDeployButton {display:none;}
+
+    header[data-testid="stHeader"] {
+        background: transparent;
+    }
+
+    button[kind="header"],
+    [data-testid="collapsedControl"] {
+        display: inline-flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
 
     .stApp {
         background: radial-gradient(circle at 15% 8%, #fff8f5 0%, #fcf8f2 38%, #f7f1e8 100%);
